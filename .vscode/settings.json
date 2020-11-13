@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "/usr/bin/python3",
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pylintEnabled": true,
+    "django.snippets.exclude": [
+
+        "cms",
+        "wagtail"
+    ]
+}
