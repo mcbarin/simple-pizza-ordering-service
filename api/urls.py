@@ -5,6 +5,9 @@ from api import views
 from customer import views as customer_views
 
 router = DefaultRouter()
+
+router.register('flavor', views.FlavorCreateListViewSet)
+
 router.register('order', views.OrderCreateListViewSet)
 router.register('order', views.OrderRetrieveUpdateDestroyViewSet)
 

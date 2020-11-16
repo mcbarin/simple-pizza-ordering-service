@@ -10,6 +10,19 @@ from django_filters.rest_framework import DjangoFilterBackend
 from api import models, serializers
 
 
+class FlavorBaseViewSet(viewsets.GenericViewSet):
+    """Flavor base view set with basic attributes"""
+    queryset = models.Flavor.objects.all()
+    serializer_class = serializers.FlavorSerializer
+
+
+class FlavorCreateListViewSet(FlavorBaseViewSet,
+                              mixins.CreateModelMixin,
+                              mixins.ListModelMixin):
+    """Flavor create, list view sets"""
+    pass
+
+
 class OrderBaseViewSet(viewsets.GenericViewSet):
     """Order base view set with basic attributes"""
     queryset = models.Order.objects.all()

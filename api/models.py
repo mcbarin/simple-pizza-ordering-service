@@ -3,7 +3,7 @@ from customer.models import Customer
 
 
 class Flavor(models.Model):
-    name = models.CharField(max_length=63)
+    name = models.CharField(max_length=63, unique=True)
 
 
 class Pizza(models.Model):
